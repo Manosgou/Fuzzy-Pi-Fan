@@ -1,0 +1,10 @@
+[package]
+name = "fuzzy_pi_fan"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sysfs-pwm = { git = "https://github.com/rust-embedded/rust-sysfs-pwm", branch = "master" }
+rsfuzzy={git="https://github.com/auseckas/rsfuzzy",branch = "master"}
