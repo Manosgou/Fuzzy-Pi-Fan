@@ -55,4 +55,5 @@ The basic idea of this application is to use a fuzzy logic model in order to con
 ![plot](./images/mf_plot.png)
 
 **Run & Build**
+
 Use cargo in order to run and build the project. **Be sure you have installed the appropriate rust compiler (toolchain)** 
