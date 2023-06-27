@@ -25,16 +25,16 @@ fn main() {
 
     let temp = rsfuzzy::fz_input_var![
         ("down", "cold", vec![30.0, 60.0]),
-        ("triangle", "warm", vec![40.0, 60.0, 70.0]),
+        ("triangle", "warm", vec![40.0, 60.0, 80.0]),
         ("up", "hot", vec![60.0, 90.0])
     ];
 
     f_engine.add_input_var("temp", temp, 30, 90);
 
     let fan_speed = rsfuzzy::fz_output_var![
-        ("down", "low", vec![0.0, 40.0]),
-        ("triangle", "moderate", vec![20.0, 60.0, 70.0]),
-        ("up", "high", vec![60.0, 100.0])
+        ("down", "low", vec![0.0, 50.0]),
+        ("triangle", "moderate", vec![25.0, 50.0, 75.0]),
+        ("up", "high", vec![50.0, 100.0])
     ];
     f_engine.add_output_var("fan_speed", fan_speed, 0, 100);
 
