@@ -53,3 +53,6 @@ _(Huge thanks to the creators ❤️)_
 The basic idea of this application is to use a fuzzy logic model in order to control the speed of the fan. The temperature of the pi processor is entered as a parameter in the model which then outputs the fan speed. The following plot shows the membership functions:
 
 ![plot](./images/mf_plot.png)
+
+**Run & Build**
+Use cargo in order to run and build the project. **Be sure you have installed the appropriate rust compiler (toolchain)** 
