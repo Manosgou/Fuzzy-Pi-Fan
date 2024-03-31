@@ -59,10 +59,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     f_engine.add_defuzz("centroid");
 
     pwm.with_exported(|| {
-        let is_enabled = pwm.get_enabled()?;
-        if !is_enabled {
-            pwm.enable(true)?;
-        }
+        pwm.enable(true)?;
         pwm.set_period_ns(20_000_000)?;
         loop {
             let start = CpuInstant::now()?;
