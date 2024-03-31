@@ -78,7 +78,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                 ("cpu_usage", cpu_percentage.unwrap())
             ];
             let result = f_engine.calculate(inputs);
-            let duty_cycle = f32::trunc(result * 10.0) / 1000.0;
+            let duty_cycle = f32::trunc(result * 1.0) / 100.0;
             pwm.set_duty_cycle_ns(((period_ns as f32) * duty_cycle) as u32)?;
         }
     })?;
