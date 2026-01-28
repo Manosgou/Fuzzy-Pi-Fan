@@ -15,10 +15,10 @@ Hardware PWM must be enabled in order for this app to work.Activate it by adding
 | PWM1 | 13   | 4        | Alt0 | dtoverlay=pwm,pin=13,func=4 |
 | PWM1 | 19   | 2        | Alt5 | dtoverlay=pwm,pin=19,func=2 |
 
-Edit the /boot/config.txt file and add the dtoverlay line in the file. _You need root privileges for this_:
+Edit the **/boot/firmware/config.txt** _(OLD: /boot/config.txt)_ file and add the dtoverlay line in the file. _You need root privileges for this_:
 
 ```bash
-sudo nano /boot/config.txt
+sudo nano /boot/firmware/config.txt
 ```
 
 Save the file and reboot:
@@ -34,6 +34,12 @@ The numbers in brackets (_pwmchip{num} , pwm{num}_) correspond to values of the 
 ```rust
 const  BB_PWM_CHIP:  u32  =  0;
 const  BB_PWM_NUMBER:  u32  =  0;
+```
+
+If pwm{num} is missing, do the following (replace {num} with the pwm number according to your configuration): 
+
+```bash
+echo {num} > export
 ```
 
 **Prerequisites**
